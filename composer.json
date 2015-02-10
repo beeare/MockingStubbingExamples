@@ -1,0 +1,25 @@
+{
+	"name": "beeare/mockingstubbing",
+	"description": "Mocking and stubbing examples",
+	"license": "MIT",
+	"keywords": ["mocking", "stubbing"],
+	"authors": [
+		{
+			"name": "Benjamin Rack",
+			"email": "beeare@gmx.de"
+		}
+	],
+	"require": {
+	},
+	"require-dev": {
+        "phpunit/phpunit": "4.5.*",
+		"mockery/mockery": "0.9.*",
+		"phpspec/prophecy": "~1.0",
+		"phpspec/prophecy-phpunit": "~1.0"
+	},
+	"autoload": {
+        "psr-4": {
+            "beeare\\MockingStubbing\\": "src"
+        }
+    }
+}

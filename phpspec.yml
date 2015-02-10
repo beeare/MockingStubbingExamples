@@ -1,0 +1,7 @@
+#extensions:
+#    - PhpSpec\NyanFormattersExtension\Extension
+#formatter.name: pretty
+suites:
+    markdown_suite:
+        namespace: beeare\MockingStubbing
+        psr4_prefix: beeare\MockingStubbing

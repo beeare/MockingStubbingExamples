@@ -15,9 +15,15 @@
         "phpunit/phpunit": "4.5.*",
 		"mockery/mockery": "0.9.*",
 		"phpspec/prophecy": "~1.0",
-		"phpspec/prophecy-phpunit": "~1.0"
+		"phpspec/prophecy-phpunit": "~1.0",
+		"phpspec/phpspec": "~2.0",
+		"phpspec/nyan-formatters": "1.*",
+		"behat/behat": "2.4.*@stable"
 	},
 	"autoload": {
+		"psr-0": {
+			"beeare\\MockingStubbing": "src"
+		},
         "psr-4": {
             "beeare\\MockingStubbing\\": "src"
         }

@@ -45,3 +45,6 @@ Temporary Items
 # Composer packages
 /vendor
 composer.lock
+
+# phpStorm Project Folder
+.idea

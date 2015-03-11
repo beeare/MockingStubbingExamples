@@ -2,4 +2,4 @@
 
 # MockingStubbingExamples
 
-This project ist just to excercise with different mocking frameworks and PHPUnit.
+This project ist just to exercise with different mocking frameworks and PHPUnit.

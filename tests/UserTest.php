@@ -1,13 +1,14 @@
 <?php
+namespace beeare\MockingStubbing;
 
-class UserTest extends PHPUnit_Framework_TestCase
+class UserTest extends \PHPUnit_Framework_TestCase
 {
     public function testPasswordHashing()
     {
         $hasher = $this->prophesize('beeare\MockingStubbing\Hasher');
-		$hasher->generateHash('qwerty')->willReturn('hashed_pass')->shouldBeCalled();
+        $hasher->generateHash('qwerty')->willReturn('hashed_pass')->shouldBeCalled();
 
-        $user = new beeare\MockingStubbing\User($hasher->reveal());
+        $user = new User($hasher->reveal());
         $user->setPassword('qwerty');
 
         $this->assertEquals('hashed_pass', $user->getPassword());

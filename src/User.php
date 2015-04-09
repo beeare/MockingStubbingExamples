@@ -5,8 +5,9 @@ class User
 {
 	private $hasher;
 	private $password;
-	
-	public function __construct(Hasher $hasher)
+    private $name;
+
+    public function __construct(Hasher $hasher)
 	{
 		$this->hasher = $hasher;
 	}
@@ -20,4 +21,14 @@ class User
 	{
 		return $this->password;
 	}
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
 }

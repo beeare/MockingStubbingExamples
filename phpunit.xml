@@ -9,14 +9,29 @@
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="false"
-		 beStrictAboutTestsThatDoNotTestAnythind="true"
-		 beStrictAboutOutputDuringTests="true"
-		 beStrictAboutTestSize="true"
-		 beStrictAboutTodoAnnotatedTests="true"
-		 checkForUnintentionallyCoveredCode="true">
+         beStrictAboutTestsThatDoNotTestAnythind="true"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutTestSize="true"
+         beStrictAboutTodoAnnotatedTests="true"
+         checkForUnintentionallyCoveredCode="true">
     <testsuites>
         <testsuite name="MockingStubbing Test Suite">
             <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
+    <listeners>
+        <!--
+            Register the TestListener for Mockery.
+
+            Mock expectations won’t be verified and no exception will be thrown even if they are not respected when
+            Mockery::close() isn't called after a test. The TestListener ensures that Mockery::close() is called
+            automatically after each test.
+
+            THE LISTENER WILL NOT WORK CORRECTLY FOR TESTS THAT ARE RUN IN SEPARATE PROCESSES!!!
+
+            Call Mockery::close() in the tearDown() method of each test class which uses process isolation (e.g.
+            @runTestsInSeparateProcesses on test class level or @runInSeparateProcess on test method level).
+        -->
+        <listener class="\Mockery\Adapter\Phpunit\TestListener"></listener>
+    </listeners>
 </phpunit>

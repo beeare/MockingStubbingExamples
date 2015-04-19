@@ -3,6 +3,9 @@ namespace beeare\MockingStubbing;
 
 use \Mockery as M;
 
+/**
+ * @see https://github.com/padraic/mockery/tree/master/examples/starship
+ */
 class StarshipTest extends \PHPUnit_Framework_TestCase
 {
     public function testEngineeringResponseToEnteringOrbit()

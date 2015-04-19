@@ -1,6 +1,9 @@
 <?php
 namespace beeare\MockingStubbing;
 
+/**
+ * @see https://github.com/padraic/mockery/tree/master/examples/starship
+ */
 class Starship
 {
     protected $_engineering = null;

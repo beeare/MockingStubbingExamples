@@ -20,7 +20,7 @@ class TemperatureService
     }
 
     /**
-     * Get current temperature in °F
+     * Get current temperature in Â°F
      *
      * @return float
      */

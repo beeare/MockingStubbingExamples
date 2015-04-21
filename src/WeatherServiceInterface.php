@@ -7,7 +7,7 @@ namespace beeare\MockingStubbing;
 interface WeatherServiceInterface
 {
     /**
-     * Return the temperature in °C
+     * Return the temperature in Â°C
      *
      * @return float
      */
